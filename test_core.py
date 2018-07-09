@@ -41,3 +41,26 @@ def test_attack():
         'damage_low': 5,
         'damage_high': 15
     }) == 80
+
+
+def test_heal():
+    assert heal({
+        'health': 79,
+        'rage': 30,
+        'damage_low': 5,
+        'damage_high': 15
+    }) == 89
+
+    assert heal({
+        'health': 100,
+        'rage': 30,
+        'damage_low': 5,
+        'damage_high': 15
+    }) == 100
+
+    assert heal({
+        'health': 79,
+        'rage': 15,
+        'damage_low': 5,
+        'damage_high': 15
+    }) == 'Insufficient rage'
