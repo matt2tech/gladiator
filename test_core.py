@@ -15,3 +15,29 @@ def test_new_gladiator():
         'damage_low': 5,
         'damage_high': 15
     }
+
+
+def test_attack():
+    assert attack({
+        'health': 100,
+        'rage': 0,
+        'damage_low': 10,
+        'damage_high': 10
+    }, {
+        'health': 100,
+        'rage': 0,
+        'damage_low': 5,
+        'damage_high': 15
+    }) == 90
+
+    assert attack({
+        'health': 100,
+        'rage': 100,
+        'damage_low': 10,
+        'damage_high': 10
+    }, {
+        'health': 100,
+        'rage': 0,
+        'damage_low': 5,
+        'damage_high': 15
+    }) == 80
