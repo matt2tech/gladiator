@@ -21,3 +21,11 @@ def attack(attacker, defender):
         defender['health'] = defender['health'] - attack
         attacker['rage'] += 15
         return defender['health']
+
+
+def heal(gladiator):
+    if gladiator['rage'] >= 20:
+        gladiator['health'] = min(gladiator['health'] + 10, 100)
+        gladiator['rage'] -= 20
+    else:
+        print('Insufficient rage')
