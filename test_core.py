@@ -64,3 +64,19 @@ def test_heal():
         'damage_low': 5,
         'damage_high': 15
     }) == 'Insufficient rage'
+
+
+def test_is_dead():
+    assert is_dead({
+        'health': 0,
+        'rage': 0,
+        'damage_low': 5,
+        'damage_high': 15
+    }) == True
+
+    assert is_dead({
+        'health': 1,
+        'rage': 0,
+        'damage_low': 5,
+        'damage_high': 15
+    }) == False
