@@ -1,13 +1,14 @@
 from core import *
+from time import sleep
 
 
 def get_name():
-    name = input('First player\'s name? ').strip().capitalize()
+    name = input('Contestant #1\'s name? ').strip().capitalize()
     return name
 
 
 def get_name2():
-    name = input('Second player\'s name? ').strip().capitalize()
+    name = input('Contestant #2\'s name? ').strip().capitalize()
     return name
 
 
@@ -27,7 +28,7 @@ def player_turn(player, other_player, name, other_name):
             break
 
         elif text == '2':
-            player['rage'] = min(player['rage'] + 15, 100)
+            player['rage'] = min(player['rage'] + 20, 100)
             print('\( -_-)/')
             break
 
@@ -81,6 +82,22 @@ def main():
     player1 = player()
     player2 = player()
 
+    print(
+        '\n---------------------------------------------------------------\n')
+
+    print('WELCOME TO THE BATTLE OF THE AGES\n'.center(50))
+    sleep(2)
+    print('From zero to hero, the legendary {}\n'.format(first_player).center(
+        51))
+    sleep(2)
+    print('From unknown to famous, the all-star {}\n'.format(second_player)
+          .center(51))
+    sleep(2)
+    print('{} vs. {}! Let the battle begin!'.format(first_player,
+                                                    second_player).center(50))
+    sleep(2)
+    print(
+        '\n---------------------------------------------------------------\n')
     battle(first_player, second_player, player1, player2)
 
 
