@@ -30,7 +30,7 @@ def attack(attacker, defender, player, other_player):
             #testing function
             #return defender['health']
     else:
-        print('{} missed'.format(attacker))
+        print('{} missed'.format(player))
         print('( O-O)~o-|===>[~(^-^ )')
 
 
