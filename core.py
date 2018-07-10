@@ -13,20 +13,25 @@ def new_gladiator(health, rage, damage_low, damage_high):
 
 def attack(attacker, defender, player, other_player):
     attack = randint(attacker['damage_low'], attacker['damage_high'])
-    if attacker['rage'] >= randint(1, 100):
-        print('{} rages, slings the controller and hits {} in the head'.format(
-            player, other_player))
-        print('( -_-)~ --B(#;-;)')
-        defender['health'] = max(defender['health'] - attack * 2, 0)
-        attacker['rage'] = 0
-        #testing function
-        #return defender['health']
+    accuracy = randint(1, 100)
+    if accuracy > 15:
+        if attacker['rage'] >= randint(1, 100):
+            print('{} rages, slings the controller and hits {} in the head'.
+                  format(player, other_player))
+            print('( -_-)~ --B(#;-;)')
+            defender['health'] = max(defender['health'] - attack * 2, 0)
+            attacker['rage'] = 0
+            #testing function
+            #return defender['health']
+        else:
+            defender['health'] = max(defender['health'] - attack, 0)
+            attacker['rage'] = min(attacker['rage'] + 10, 100)
+            print('( *-*)~o-|===>(T-T )')
+            #testing function
+            #return defender['health']
     else:
-        defender['health'] = max(defender['health'] - attack, 0)
-        attacker['rage'] = min(attacker['rage'] + 10, 100)
-        print('( *-*)~o-|===>(T-T )')
-        #testing function
-        #return defender['health']
+        print('{} missed'.format(attacker))
+        print('( O-O)~o-|===>[~(^-^ )')
 
 
 def heal(gladiator):
