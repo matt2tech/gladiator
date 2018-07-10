@@ -52,7 +52,7 @@ def rampage(attacker, defender, player, other_player):
             defender['health'] = max(defender['health'] - 50, 0)
             attacker['rage'] = 0
             print(
-                '{} unleashed all rage, went on a rampaged, and severely injured {}'.
+                '{} unleashed built-up rage, went on a rampaged and severely injured {}'.
                 format(player, other_player))
             print("--( -_-)~o-|===>(X_X )")
 
