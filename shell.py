@@ -21,7 +21,7 @@ def player_turn(player, other_player, name, other_name):
     text = ''
     while text != '4':
         text = input(
-            'It is {}\'s move.\n1 - attack\n2 - pass\n3 - heal\n4 - rampage\n>>> '.
+            'It is {}\'s move.\n1 - attack\n2 - wait\n3 - heal\n4 - rampage\n>>> '.
             format(name))
         if text == '1':
             attack(player, other_player, name, other_name)
