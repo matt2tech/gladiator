@@ -16,6 +16,7 @@ def attack(attacker, defender, player, other_player):
     if attacker['rage'] >= randint(1, 100):
         print('{} rages, slings the controller and hits {} in the head'.format(
             player, other_player))
+        print('(')
         defender['health'] = max(defender['health'] - attack * 2, 0)
         attacker['rage'] = 0
         #testing function
@@ -23,6 +24,7 @@ def attack(attacker, defender, player, other_player):
     else:
         defender['health'] = max(defender['health'] - attack, 0)
         attacker['rage'] = min(attacker['rage'] + 5, 100)
+        print('( *-*)~o-|===>(T-T )')
         #testing function
         #return defender['health']
 
@@ -31,10 +33,12 @@ def heal(gladiator):
     if gladiator['rage'] > 0:
         gladiator['health'] = min(gladiator['health'] + gladiator['rage'], 100)
         gladiator['rage'] -= gladiator['rage']
+        print('(* .*)=[HP^]')
         #testing function
         #return gladiator['health']
     else:
-        print('Insufficient rage')
+        print('Need more rage')
+        print('\( ._.)/')
         #testing function
         #return 'Insufficient rage'
 
@@ -45,11 +49,14 @@ def rampage(attacker, defender, player, other_player):
             defender['health'] = max(defender['health'] - 50, 0)
             attacker['rage'] = 0
             print('{} unleashed all rage went on a rampaged, and severely injured {}'.format(player, other_player))
+            print("= = ( -_-)~o-|===>(X_X )
 
         else:
-            print('{} attempted to go on a rampage but tripped and fell over'.format(player))
+            print('{} attempted to go on a rampage but tripped and faceplanted'.format(player))
+            print('(#;-;)')
     else:
         print('{} attempted to go on a rampage but wasn\'t angry enough\n"requires 100 Rage"'.format(player))
+        print('\( ._.)/')
 
 def is_dead(gladiator):
     return gladiator['health'] == 0
