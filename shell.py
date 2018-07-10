@@ -60,6 +60,7 @@ def battle(first_player, second_player, player1, player2):
         status = is_dead(player2)
         if status == True:
             print('{} has fallen\n{} wins'.format(second_player, first_player))
+            print('\( 0o0)/ (X-X )')
             break
 
         print('{}: {} HP ||| {} Rage\n{}: {} HP ||| {} Rage'.format(
@@ -72,6 +73,7 @@ def battle(first_player, second_player, player1, player2):
         status = is_dead(player1)
         if status == True:
             print('{} has fallen\n{} wins'.format(first_player, second_player))
+            print('( X-X) \(0o0 )/')
             break
 
 
