@@ -11,24 +11,26 @@ def new_gladiator(health, rage, damage_low, damage_high):
     return gladiator1
 
 
-def attack(attacker, defender):
+def attack(attacker, defender, player, other_player):
     attack = randint(attacker['damage_low'], attacker['damage_high'])
     if attacker['rage'] >= randint(1, 100):
+        print('{} rages, slings the controller and hits {} in the head'.format(
+            player, other_player))
         defender['health'] = max(defender['health'] - attack * 2, 0)
         attacker['rage'] = 0
         #testing function
         #return defender['health']
     else:
         defender['health'] = max(defender['health'] - attack, 0)
-        attacker['rage'] += 15
+        attacker['rage'] = min(attacker['rage'] + 5, 100)
         #testing function
         #return defender['health']
 
 
 def heal(gladiator):
-    if gladiator['rage'] >= 20:
-        gladiator['health'] = min(gladiator['health'] + 10, 100)
-        gladiator['rage'] -= 20
+    if gladiator['rage'] > 0:
+        gladiator['health'] = min(gladiator['health'] + gladiator['rage'], 100)
+        gladiator['rage'] -= gladiator['rage']
         #testing function
         #return gladiator['health']
     else:
@@ -36,11 +38,18 @@ def heal(gladiator):
         #testing function
         #return 'Insufficient rage'
 
+def rampage(attacker, defender, player, other_player):
+    if attacker['rage'] = 100:
+        accuracy = randint(1, 100)
+        if accuracy > 50:
+            defender['health'] = max(defender['health'] - 50, 0)
+            attacker['rage'] = 0
+            print('{} unleashed all rage went on a rampaged, and severely injured {}'.format(player, other_player))
+
+        else:
+            print('{} attempted to go on a rampage but tripped and fell over'.format(player))
+    else:
+        print('{} attempted to go on a rampage but wasn\'t angry enough\n"requires 100 Rage"'.format(player))
 
 def is_dead(gladiator):
-    gladiator['health'] == 0
-    #testing function
-    #if gladiator['health'] == 0:
-    #    return True
-    #else:
-    #    return False
+    return gladiator['health'] == 0
