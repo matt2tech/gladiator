@@ -42,21 +42,30 @@ def heal(gladiator):
         #testing function
         #return 'Insufficient rage'
 
+
 def rampage(attacker, defender, player, other_player):
     if attacker['rage'] == 100:
         accuracy = randint(1, 100)
         if accuracy > 50:
             defender['health'] = max(defender['health'] - 50, 0)
             attacker['rage'] = 0
-            print('{} unleashed all rage went on a rampaged, and severely injured {}'.format(player, other_player))
-            print("= = ( -_-)~o-|===>(X_X )
+            print(
+                '{} unleashed all rage went on a rampaged, and severely injured {}'.
+                format(player, other_player))
+            print("= = ( -_-)~o-|===>(X_X )")
 
         else:
-            print('{} attempted to go on a rampage but tripped and faceplanted'.format(player))
+            attacker['rage'] = 0
+            print(
+                '{} attempted to go on a rampage but tripped and faceplanted'.
+                format(player))
             print('(#;-;)')
     else:
-        print('{} attempted to go on a rampage but wasn\'t angry enough\n"requires 100 Rage"'.format(player))
+        print(
+            '{} attempted to go on a rampage but wasn\'t angry enough\n"requires 100 Rage"'.
+            format(player))
         print('\( ._.)/')
+
 
 def is_dead(gladiator):
     return gladiator['health'] == 0
