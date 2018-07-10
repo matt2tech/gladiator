@@ -29,7 +29,7 @@ def player_turn(player, other_player, name, other_name):
 
         elif text == '2':
             player['rage'] = min(player['rage'] + 20, 100)
-            print('\( -_-)/')
+            print('(*-_-)')
             break
 
         elif text == '3':
