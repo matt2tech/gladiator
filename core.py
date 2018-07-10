@@ -23,7 +23,7 @@ def attack(attacker, defender, player, other_player):
         #return defender['health']
     else:
         defender['health'] = max(defender['health'] - attack, 0)
-        attacker['rage'] = min(attacker['rage'] + 5, 100)
+        attacker['rage'] = min(attacker['rage'] + 10, 100)
         print('( *-*)~o-|===>(T-T )')
         #testing function
         #return defender['health']
