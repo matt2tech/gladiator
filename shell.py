@@ -3,12 +3,12 @@ from time import sleep
 
 
 def get_name():
-    name = input('Contestant #1\'s name? ').strip().capitalize()
+    name = input('Contestant #1\'s name? ').strip()
     return name
 
 
 def get_name2():
-    name = input('Contestant #2\'s name? ').strip().capitalize()
+    name = input('Contestant #2\'s name? ').strip()
     return name
 
 
