@@ -20,25 +20,24 @@ def player_turn(player, other_player, name, other_name):
     text = ''
     while text != '4':
         text = input(
-            'It is {}\'s move.\n1 - attack\n2 - pass\n3 - heal\n4 - quit\n>>> '.
+            'It is {}\'s move.\n1 - attack\n2 - pass\n3 - heal\n4 - rampage\n>>> '.
             format(name))
         if text == '1':
             attack(player, other_player, name, other_name)
-            print('(+-_-)~o|==>(#X_X)')
             break
 
         elif text == '2':
-            player['rage'] = min(player['rage'] + 20, 100)
-            print('\(*-_-)/')
+            player['rage'] = min(player['rage'] + 15, 100)
+            print('\( -_-)/')
             break
 
         elif text == '3':
             heal(player)
-            print('(* .*)=[HP^]')
             break
 
         elif text == '4':
-            return True
+            rampage(player, other_player, name, other_name)
+            break
 
         else:
             print('Invalid move')
