@@ -31,7 +31,8 @@ def attack(attacker, defender, player, other_player):
 
 def heal(gladiator):
     if gladiator['rage'] > 0:
-        gladiator['health'] = min(gladiator['health'] + gladiator['rage'], 100)
+        gladiator['health'] = min(
+            gladiator['health'] + (gladiator['rage'] / 2), 100)
         gladiator['rage'] -= gladiator['rage']
         print('(* .*)=[HP^]')
         #testing function
