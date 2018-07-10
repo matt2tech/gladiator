@@ -43,7 +43,7 @@ def heal(gladiator):
         #return 'Insufficient rage'
 
 def rampage(attacker, defender, player, other_player):
-    if attacker['rage'] = 100:
+    if attacker['rage'] == 100:
         accuracy = randint(1, 100)
         if accuracy > 50:
             defender['health'] = max(defender['health'] - 50, 0)
