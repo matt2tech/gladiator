@@ -16,21 +16,25 @@ def player():
     return player
 
 
-def player_turn(player, other_player, name):
+def player_turn(player, other_player, name, other_name):
     text = ''
     while text != '4':
         text = input(
-            'It is {}\'s move.\n1 - attack\n2 - pass\n3 - heal\n4- quit\n>>> '.
+            'It is {}\'s move.\n1 - attack\n2 - pass\n3 - heal\n4 - quit\n>>> '.
             format(name))
         if text == '1':
-            attack(player, other_player)
-            print(other_player['health'])
+            attack(player, other_player, name, other_name)
+            print('(+-_-)~o|==>(#X_X)')
             break
 
         elif text == '2':
+            player['rage'] = min(player['rage'] + 20, 100)
+            print('\(*-_-)/')
             break
 
         elif text == '3':
+            heal(player)
+            print('(* .*)=[HP^]')
             break
 
         elif text == '4':
@@ -46,23 +50,29 @@ def player_turn(player, other_player, name):
 def battle(first_player, second_player, player1, player2):
     status = ''
     while status != True:
-        status = is_dead(player1)
         print('{}: {} HP ||| {} Rage\n{}: {} HP ||| {} Rage'.format(
             first_player, player1['health'], player1['rage'], second_player,
             player2['health'], player2['rage']))
-        player_turn(player1, player2, first_player)
+        player_turn(player1, player2, first_player, second_player)
         print(
             '\n---------------------------------------------------------------\n'
         )
         status = is_dead(player2)
+        if status == True:
+            print('{} has fallen\n{} wins'.format(second_player, first_player))
+            break
 
         print('{}: {} HP ||| {} Rage\n{}: {} HP ||| {} Rage'.format(
             first_player, player1['health'], player1['rage'], second_player,
             player2['health'], player2['rage']))
-        player_turn(player2, player1, second_player)
+        player_turn(player2, player1, second_player, first_player)
         print(
             '\n---------------------------------------------------------------\n'
         )
+        status = is_dead(player1)
+        if status == True:
+            print('{} has fallen\n{} wins'.format(first_player, second_player))
+            break
 
 
 def main():
