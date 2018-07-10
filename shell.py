@@ -75,6 +75,24 @@ def battle(first_player, second_player, player1, player2):
             break
 
 
+def battle_announce(player, other_player):
+    print(
+        '\n---------------------------------------------------------------\n')
+
+    print('WELCOME TO THE BATTLE OF THE AGES\n'.center(50))
+    sleep(2)
+    print('From zero to hero, the legendary {}\n'.format(player).center(51))
+    sleep(2)
+    print('From unknown to famous, the all-star {}\n'.format(other_player)
+          .center(51))
+    sleep(2)
+    print('{} vs. {}! Let the battle begin!'.format(player,
+                                                    other_player).center(50))
+    sleep(2)
+    print(
+        '\n---------------------------------------------------------------\n')
+
+
 def main():
 
     first_player = get_name()
@@ -82,22 +100,8 @@ def main():
     player1 = player()
     player2 = player()
 
-    print(
-        '\n---------------------------------------------------------------\n')
+    battle_announce(first_player, second_player)
 
-    print('WELCOME TO THE BATTLE OF THE AGES\n'.center(50))
-    sleep(2)
-    print('From zero to hero, the legendary {}\n'.format(first_player).center(
-        51))
-    sleep(2)
-    print('From unknown to famous, the all-star {}\n'.format(second_player)
-          .center(51))
-    sleep(2)
-    print('{} vs. {}! Let the battle begin!'.format(first_player,
-                                                    second_player).center(50))
-    sleep(2)
-    print(
-        '\n---------------------------------------------------------------\n')
     battle(first_player, second_player, player1, player2)
 
 
