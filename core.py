@@ -37,7 +37,9 @@ def heal(gladiator):
         #testing function
         #return gladiator['health']
     else:
-        print('Need more rage')
+        print(
+            'Not angry enough to down those disgusting health potions\n"Rage required"'
+        )
         print('\( ._.)/')
         #testing function
         #return 'Insufficient rage'
@@ -50,9 +52,9 @@ def rampage(attacker, defender, player, other_player):
             defender['health'] = max(defender['health'] - 50, 0)
             attacker['rage'] = 0
             print(
-                '{} unleashed all rage went on a rampaged, and severely injured {}'.
+                '{} unleashed all rage, went on a rampaged, and severely injured {}'.
                 format(player, other_player))
-            print("= = ( -_-)~o-|===>(X_X )")
+            print("--( -_-)~o-|===>(X_X )")
 
         else:
             attacker['rage'] = 0
