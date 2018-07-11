@@ -1,12 +1,13 @@
 from random import randint
 
 
-def new_gladiator(health, rage, damage_low, damage_high):
+def new_gladiator(health, rage, damage_low, damage_high, evasion):
     gladiator1 = {
         'health': health,
         'rage': rage,
         'damage_low': damage_low,
-        'damage_high': damage_high
+        'damage_high': damage_high,
+        'evasion': 15
     }
     return gladiator1
 
@@ -14,7 +15,7 @@ def new_gladiator(health, rage, damage_low, damage_high):
 def attack(attacker, defender, player, other_player):
     attack = randint(attacker['damage_low'], attacker['damage_high'])
     accuracy = randint(1, 100)
-    if accuracy > 15:
+    if accuracy > defender['evasion']:
         if attacker['rage'] >= randint(1, 100):
             print('{} rages, slings the controller and hits {} in the head'.
                   format(player, other_player))
@@ -54,7 +55,7 @@ def heal(gladiator):
 def rampage(attacker, defender, player, other_player):
     if attacker['rage'] == 100:
         accuracy = randint(1, 100)
-        if accuracy > 50:
+        if accuracy > defender['evasion'] + 35:
             defender['health'] = max(defender['health'] - 50, 0)
             attacker['rage'] = 0
             print(
@@ -77,3 +78,9 @@ def rampage(attacker, defender, player, other_player):
 
 def is_dead(gladiator):
     return gladiator['health'] == 0
+
+
+def evading(gladiator):
+    gladiator['evasion'] = min(gladiator['evasion'] + gladiator['rage'], 100)
+    gladiator['rage'] = 0
+    print('ε=ε=ε=┌( o-o)ﾉ')
