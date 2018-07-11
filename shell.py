@@ -13,15 +13,15 @@ def get_name2():
 
 
 def player():
-    player = new_gladiator(100, 0, 5, 15)
+    player = new_gladiator(100, 0, 5, 15, 15)
     return player
 
 
 def player_turn(player, other_player, name, other_name):
     text = ''
-    while text != '4':
+    while True:
         text = input(
-            'It is {}\'s move.\n1 - attack\n2 - wait\n3 - heal\n4 - rampage\n>>> '.
+            'It is {}\'s move.\n1 - attack\n2 - wait\n3 - heal\n4 - rampage\n5 - evade\n>>> '.
             format(name))
         if text == '1':
             attack(player, other_player, name, other_name)
@@ -40,6 +40,10 @@ def player_turn(player, other_player, name, other_name):
             rampage(player, other_player, name, other_name)
             break
 
+        elif text == '5':
+            evading(player)
+            break
+
         else:
             print('Invalid move')
             print(
@@ -47,9 +51,14 @@ def player_turn(player, other_player, name, other_name):
             )
 
 
+def evading_reset(player):
+    player['evasion'] = 15
+
+
 def battle(first_player, second_player, player1, player2):
     status = ''
     while status != True:
+        evading_reset(player1)
         print('{}: {} HP ||| {} Rage\n{}: {} HP ||| {} Rage'.format(
             first_player, player1['health'], player1['rage'], second_player,
             player2['health'], player2['rage']))
@@ -63,6 +72,7 @@ def battle(first_player, second_player, player1, player2):
             print('ᕦ(ˇò_ó)ᕤ (✖╭╮✖ )')
             break
 
+        evading_reset(player2)
         print('{}: {} HP ||| {} Rage\n{}: {} HP ||| {} Rage'.format(
             first_player, player1['health'], player1['rage'], second_player,
             player2['health'], player2['rage']))
