@@ -18,7 +18,7 @@ def attack(attacker, defender, player, other_player):
         if attacker['rage'] >= randint(1, 100):
             print('{} rages, slings the controller and hits {} in the head'.
                   format(player, other_player))
-            print('( -_-)~ --B(#;-;)')
+            print('( -_-)つ --===B(҂T-T)')
             defender['health'] = max(defender['health'] - attack * 2, 0)
             attacker['rage'] = 0
             #testing function
@@ -26,12 +26,12 @@ def attack(attacker, defender, player, other_player):
         else:
             defender['health'] = max(defender['health'] - attack, 0)
             attacker['rage'] = min(attacker['rage'] + 10, 100)
-            print('( *-*)~o-|===>(T-T )')
+            print('( ಠ_ಠ)⊃o-|===>(ಠ╭╮ಠ )')
             #testing function
             #return defender['health']
     else:
         print('{} missed'.format(player))
-        print('( O-O)~o-|===>[~(^-^ )')
+        print('!!!( O.O)⊃o-|===> ε=ε=ε=┌( ^-^)ﾉ')
 
 
 def heal(gladiator):
@@ -46,7 +46,7 @@ def heal(gladiator):
         print(
             'Not angry enough to down those disgusting health potions\n"Rage required"'
         )
-        print('\( ._.)/')
+        print('¯\_(o-o)_/¯')
         #testing function
         #return 'Insufficient rage'
 
@@ -60,7 +60,7 @@ def rampage(attacker, defender, player, other_player):
             print(
                 '{} unleashed built-up rage, went on a rampaged and severely injured {}'.
                 format(player, other_player))
-            print("--( -_-)~o-|===>(X_X )")
+            print("（╯°□ °）╯︵( .o.)")
 
         else:
             attacker['rage'] = 0
@@ -72,7 +72,7 @@ def rampage(attacker, defender, player, other_player):
         print(
             '{} attempted to go on a rampage but wasn\'t angry enough\n"requires 100 Rage"'.
             format(player))
-        print('\( ._.)/')
+        print('¯\_(o-o)_/¯')
 
 
 def is_dead(gladiator):
