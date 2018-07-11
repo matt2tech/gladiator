@@ -39,7 +39,7 @@ def attack(attacker, defender, player, other_player):
 def heal(gladiator, name):
     if gladiator['rage'] > 0:
         gladiator['health'] = min(
-            gladiator['health'] + int(gladiator['rage'] * 0.85), 100)
+            gladiator['health'] + int(gladiator['rage'] * 0.80), 100)
         gladiator['rage'] -= gladiator['rage']
         print('{} drunk a potion'.format(name))
         print('(* .*)=[HP^]')
