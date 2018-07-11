@@ -111,7 +111,14 @@ def battle_announce(player, other_player):
 
 
 def main():
-
+    print('''\t(\ 
+\t\\'\ 
+\t \\'\      __________  
+\t / '|    ()_________)
+\t \ '/    \  Sign-Up \\
+\t   \      \ ~~~~~~~~ \\
+\t   ==).    \__________\\
+\t  (__)    ()__________)\n''')
     first_player = get_name()
     second_player = get_name2()
     player1 = player()
