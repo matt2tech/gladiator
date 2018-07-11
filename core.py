@@ -19,7 +19,7 @@ def attack(attacker, defender, player, other_player):
         if attacker['rage'] >= randint(1, 100):
             print('{} rages, slings the controller and hits {} in the head'.
                   format(player, other_player))
-            print('( -_-)つ --===B(҂T-T)')
+            print('( -_-)つ -=≡B(҂T-T)')
             defender['health'] = max(defender['health'] - attack * 2, 0)
             attacker['rage'] = 0
             #testing function
@@ -27,12 +27,13 @@ def attack(attacker, defender, player, other_player):
         else:
             defender['health'] = max(defender['health'] - attack, 0)
             attacker['rage'] = min(attacker['rage'] + 10, 100)
+            print('{} hit {}'.format(player, other_player))
             print('( ಠ_ಠ)⊃o-|===>(ಠ╭╮ಠ )')
             #testing function
             #return defender['health']
     else:
         print('{} missed'.format(player))
-        print('!!!( O.O)⊃o-|===> ε=ε=ε=┌( ^-^)ﾉ')
+        print('( ÒДÓ)⊃o-|===> ε=ε=ε=┌( ^-^)ﾉ')
 
 
 def heal(gladiator, name):
@@ -82,8 +83,13 @@ def is_dead(gladiator):
 
 
 def evading(gladiator, name):
-    gladiator['evasion'] = min(gladiator['evasion'] + gladiator['rage'] / 3,
-                               100)
-    gladiator['rage'] = 0
-    print('{} is evading'.format(name))
-    print('ε=ε=ε=┌( o-o)ﾉ')
+    if gladiator['rage'] > 0:
+        gladiator['evasion'] = min(
+            gladiator['evasion'] + gladiator['rage'] / 3, 100)
+        gladiator['rage'] = 0
+        print('{} is evading'.format(name))
+        print('ε=ε=ε=┌( o-o)ﾉ')
+
+    else:
+        print('{} attempted to evade but tripped over a pebble'.format(name))
+        print('.︵ /(.□ . \）')
