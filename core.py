@@ -35,19 +35,20 @@ def attack(attacker, defender, player, other_player):
         print('!!!( O.O)⊃o-|===> ε=ε=ε=┌( ^-^)ﾉ')
 
 
-def heal(gladiator):
+def heal(gladiator, name):
     if gladiator['rage'] > 0:
         gladiator['health'] = min(
             gladiator['health'] + int(gladiator['rage'] * 0.75), 100)
         gladiator['rage'] -= gladiator['rage']
+        print('{} drunk a potion'.format(name))
         print('(* .*)=[HP^]')
         #testing function
         #return gladiator['health']
     else:
         print(
-            'Not angry enough to down those disgusting health potions\n"Rage required"'
-        )
-        print('¯\_(o-o)_/¯')
+            '{} attempted to drink a potion but couldn\'t stomach it\n"Rage required"'.
+            format(name))
+        print('(°Д°)')
         #testing function
         #return 'Insufficient rage'
 
@@ -80,8 +81,9 @@ def is_dead(gladiator):
     return gladiator['health'] == 0
 
 
-def evading(gladiator):
+def evading(gladiator, name):
     gladiator['evasion'] = min(gladiator['evasion'] + gladiator['rage'] / 3,
                                100)
     gladiator['rage'] = 0
+    print('{} is evading'.format(name))
     print('ε=ε=ε=┌( o-o)ﾉ')
