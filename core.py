@@ -74,7 +74,7 @@ def rampage(attacker, defender, player, other_player):
             print('(#;-;)')
     else:
         print(
-            '{} attempted to go on a rampage but wasn\'t angry enough\n"requires 100 Rage"'.
+            '{} attempted to go on a rampage but wasn\'t angry enough\n"100 Rage required"'.
             format(player))
         print('¯\_(o-o)_/¯')
 
@@ -92,5 +92,7 @@ def evading(gladiator, name):
         print('ε=ε=ε=┌( o-o)ﾉ')
 
     else:
-        print('{} attempted to evade but tripped over a pebble'.format(name))
+        print(
+            '{} attempted to evade but tripped over a pebble\n"Rage required'.
+            format(name))
         print('.︵ /(.□ . \）')
