@@ -29,11 +29,12 @@ def player_turn(player, other_player, name, other_name):
 
         elif text == '2':
             player['rage'] = min(player['rage'] + 20, 100)
+            print('{} is waiting'.format(name))
             print('(ง-_-)ง')
             break
 
         elif text == '3':
-            heal(player)
+            heal(player, name)
             break
 
         elif text == '4':
@@ -41,7 +42,7 @@ def player_turn(player, other_player, name, other_name):
             break
 
         elif text == '5':
-            evading(player)
+            evading(player, name)
             break
 
         else:
