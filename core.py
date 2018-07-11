@@ -34,7 +34,7 @@ def attack(attacker, defender, player, other_player):
     else:
         print('{} missed'.format(player))
         print('( ÒДÓ)⊃o-|===> ε=ε=ε=┌( ^-^)ﾉ')
-        attacker['rage'] == 0
+        attacker['rage'] = 0
 
 
 def heal(gladiator, name):
