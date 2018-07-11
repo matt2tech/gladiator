@@ -57,7 +57,7 @@ def heal(gladiator, name):
 def rampage(attacker, defender, player, other_player):
     if attacker['rage'] == 100:
         accuracy = randint(1, 100)
-        if accuracy > defender['evasion'] + 35:
+        if accuracy > min(defender['evasion'] + 35, 80):
             defender['health'] = max(defender['health'] - 50, 0)
             attacker['rage'] = 0
             print(
