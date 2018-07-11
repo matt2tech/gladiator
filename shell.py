@@ -109,7 +109,7 @@ def battle_announce(player, other_player):
 \t        \     :::     /
 \t         \    :::    /
 \t          `-. ::: .-'
-\t            //:::\\\\
+\t            //\:/\\\\
 \t           //  '  \\\\
 \t          |/       \\\\
 ''')
