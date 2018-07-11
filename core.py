@@ -85,7 +85,7 @@ def is_dead(gladiator):
 def evading(gladiator, name):
     if gladiator['rage'] > 0:
         gladiator['evasion'] = min(
-            gladiator['evasion'] + gladiator['rage'] / 3, 100)
+            gladiator['evasion'] + gladiator['rage'] / 1.5, 100)
         gladiator['rage'] = 0
         print('{} is evading'.format(name))
         print('ε=ε=ε=┌( o-o)ﾉ')
