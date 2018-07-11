@@ -29,7 +29,7 @@ def player_turn(player, other_player, name, other_name):
 
         elif text == '2':
             player['rage'] = min(player['rage'] + 20, 100)
-            print('(*-_-)')
+            print('(ง-_-)ง')
             break
 
         elif text == '3':
@@ -60,7 +60,7 @@ def battle(first_player, second_player, player1, player2):
         status = is_dead(player2)
         if status == True:
             print('{} has fallen\n{} wins'.format(second_player, first_player))
-            print('\( 0o0)/ (X-X )')
+            print('ᕦ(ˇò_ó)ᕤ (✖╭╮✖ )')
             break
 
         print('{}: {} HP ||| {} Rage\n{}: {} HP ||| {} Rage'.format(
@@ -73,14 +73,29 @@ def battle(first_player, second_player, player1, player2):
         status = is_dead(player1)
         if status == True:
             print('{} has fallen\n{} wins'.format(first_player, second_player))
-            print('( X-X) \(0o0 )/')
+            print('( ✖╭╮✖) ᕦ(ò_óˇ)ᕤ')
             break
 
 
 def battle_announce(player, other_player):
     print(
         '\n---------------------------------------------------------------\n')
-
+    print('''\t   |\                     /)
+\t /\_\\\__               (_//
+\t|   `>\-`     _._       //`)
+\t \ /` \\\  _.-`:::`-._  //
+\t  `    \|`    :::    `|/
+\t        |     :::     |
+\t        |.....:::.....|
+\t        |:::::::::::::|
+\t        |     :::     |
+\t        \     :::     /
+\t         \    :::    /
+\t          `-. ::: .-'
+\t           //`:::`\\\\
+\t          //   '   \\\\
+\t         |/         \\\\
+''')
     print('WELCOME TO THE BATTLE OF THE AGES\n'.center(50))
     sleep(2)
     print('From zero to hero, the legendary {}\n'.format(player).center(51))
