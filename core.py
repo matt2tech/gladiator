@@ -19,7 +19,7 @@ def attack(attacker, defender, player, other_player):
         if attacker['rage'] >= randint(1, 100):
             print('{} rages, slings the controller and hits {} in the head'.
                   format(player, other_player))
-            print('( -_-)つ -=≡B(҂T-T)')
+            print('( -_-)つ -=≡~B(҂T-T)')
             defender['health'] = max(defender['health'] - attack * 2, 0)
             attacker['rage'] = 0
             #testing function
