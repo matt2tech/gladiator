@@ -46,7 +46,8 @@ def player_turn(player, other_player, name, other_name):
             break
 
         else:
-            print('Invalid move')
+            print('Invalid move\n"The crowd is not pleased"')
+            print('(-(-_(-_-)_-)-)')
             print(
                 '\n---------------------------------------------------------------\n'
             )
@@ -122,7 +123,7 @@ def battle_announce(player, other_player):
 
 
 def main():
-    print('''\t(\ 
+    print('''\n\t(\ 
 \t\\'\ 
 \t \\'\      __________  
 \t / '|    ()_________)
