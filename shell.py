@@ -48,6 +48,7 @@ def player_turn(player, other_player, name, other_name):
         else:
             print('Invalid move\n"The crowd is not pleased"')
             print('(-(-_(-_-)_-)-)')
+            sleep(1)
             print(
                 '\n--------------------------------------------------------------------------\n'
             )
@@ -65,6 +66,7 @@ def battle(first_player, second_player, player1, player2):
             first_player, player1['health'], player1['rage'], second_player,
             player2['health'], player2['rage']))
         player_turn(player1, player2, first_player, second_player)
+        sleep(1)
         print(
             '\n--------------------------------------------------------------------------\n'
         )
@@ -79,6 +81,7 @@ def battle(first_player, second_player, player1, player2):
             first_player, player1['health'], player1['rage'], second_player,
             player2['health'], player2['rage']))
         player_turn(player2, player1, second_player, first_player)
+        sleep(1)
         print(
             '\n--------------------------------------------------------------------------\n'
         )
@@ -90,6 +93,7 @@ def battle(first_player, second_player, player1, player2):
 
 
 def battle_announce(player, other_player):
+    sleep(2)
     print(
         '\n--------------------------------------------------------------------------\n'
     )
@@ -142,7 +146,8 @@ def main():
 
     battle(first_player, second_player, player1, player2)
 
-    print('''\n                                  ___________
+    sleep(2)
+    print('''\n\n                                  ___________
                              .---'::'        `---.
                             (::::::'              )
                             |`-----._______.-----'|
