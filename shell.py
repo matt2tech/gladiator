@@ -49,7 +49,7 @@ def player_turn(player, other_player, name, other_name):
             print('Invalid move\n"The crowd is not pleased"')
             print('(-(-_(-_-)_-)-)')
             print(
-                '\n---------------------------------------------------------------\n'
+                '\n--------------------------------------------------------------------------\n'
             )
 
 
@@ -66,7 +66,7 @@ def battle(first_player, second_player, player1, player2):
             player2['health'], player2['rage']))
         player_turn(player1, player2, first_player, second_player)
         print(
-            '\n---------------------------------------------------------------\n'
+            '\n--------------------------------------------------------------------------\n'
         )
         status = is_dead(player2)
         if status == True:
@@ -80,7 +80,7 @@ def battle(first_player, second_player, player1, player2):
             player2['health'], player2['rage']))
         player_turn(player2, player1, second_player, first_player)
         print(
-            '\n---------------------------------------------------------------\n'
+            '\n--------------------------------------------------------------------------\n'
         )
         status = is_dead(player1)
         if status == True:
@@ -91,7 +91,8 @@ def battle(first_player, second_player, player1, player2):
 
 def battle_announce(player, other_player):
     print(
-        '\n---------------------------------------------------------------\n')
+        '\n--------------------------------------------------------------------------\n'
+    )
     print('''\t   |\                     /)
 \t /\_\\\__               (_//
 \t|   `>\-`     _._       //`)
@@ -119,7 +120,8 @@ def battle_announce(player, other_player):
                                                     other_player).center(50))
     sleep(2)
     print(
-        '\n---------------------------------------------------------------\n')
+        '\n--------------------------------------------------------------------------\n'
+    )
 
 
 def main():
@@ -139,6 +141,31 @@ def main():
     battle_announce(first_player, second_player)
 
     battle(first_player, second_player, player1, player2)
+
+    print('''\n                                  ___________
+                             .---'::'        `---.
+                            (::::::'              )
+                            |`-----._______.-----'|
+                            |              :::::::|
+                           .|               ::::::!-.
+                           \|               :::::/|/
+                            |               ::::::|
+                            |       Champion::::::|
+                            |     of the Arena::::|
+                            |               ::::::|
+                            |              .::::::|
+                            J              :::::::F
+                             \            :::::::/
+                              `.        .:::::::'
+                                `-._  .::::::-'
+____________________________________|  """|"______________________________
+                                    |  :::|
+                                    F   ::J
+                                   /     ::\                                        
+                              __.-'      :::`-.__
+                             (_           ::::::_)
+                               `"""---------"""'
+''')
 
 
 if __name__ == '__main__':
