@@ -2,6 +2,51 @@ from core import *
 from time import sleep
 
 
+def loading_screen():
+    print(
+        '\n--------------------------------------------------------------------------\n'
+    )
+    print('Loading Battle of the Ages...\n')
+    sleep(2)
+    print("                  [\\")
+    sleep(1)
+    print("                  |\)                                ____")
+    sleep(1)
+    print("                  |                               __(_   )__")
+    print("                  Y\          ___               _(          )")
+    sleep(2)
+    print("                 T  \       __)  )--.          (     )-----`")
+    print("                J    \   ,-(         )_         `---'")
+    print("               Y/T`-._\ (     (       _)                 __")
+    print("               /[|   ]|  `-(__  ___)-`  |\          ,-(  __)")
+    print("               | |    |      (__)       J'         (     )")
+    print("   _           | |  ] |    _           /;\          `-  '")
+    print("  (,,)        [| |    |    L'         /;  \\")
+    sleep(3)
+    print("             /||.| /\ |   /\         /.,-._\        ___ _")
+    print("            /_|||| || |  /  \        | |{  |       (._.'_)")
+    print("  L/\       | \| | '` |_ _ {|        | | U |   /\\")
+    sleep(1)
+    print(" /v^v\/\   `|  Y | [  '-' '--''-''-\"-'`'   | ,`^v\ /\,`\\")
+    print("/ ,'./  \.` |[   |       [     __   L    ] |      /^v\  \\")
+    print(",'     `    |    |           ,`##Y.   ]    |___Y Y____,_,,_,,_")
+    sleep(2)
+    print("--   -----.-(] [ |   ]     o/####U|o      ]|| /`-, Y   _   Y  Y")
+    print("   Y Y  --;`~T   |      }   \####U|[\ _,.-(^) ,-'  _  (^)__  _")
+    print("  Y  YY   ;'~~l  |   L     [|\###U'E'\  \ \Y-` _  (^) _Y  _")
+    print(" Y  Y Y   ;\~~/\{| [      _,'-\`= = '.\_ ,`   (^)(^) (^) (^)")
+    sleep(1)
+    print("     --   ;\~~~/\|  _,.-'`_  `.\_..-'\"  _ . ,_ Y_ Y_ _Y  _Y__")
+    print("    _    _; \~~( Y``   Y (^) / `,      (^)      _   (^) (^)")
+    print("   (^)  (^)`._~ /  L \  _.Y'`  _  ` --  Y - - -(^) - Y - Y -")
+    sleep(1)
+    print("    Y    Y    `'--..,-'`      (^)   _  -    _   Y ____")
+    print("      --           _    _ --   Y   (^)   _ (^)  ===   ----")
+    print("          __   -  (^)  (^)      --- Y   (^) Y")
+    sleep(2)
+    print("      _            Y    Y                Y             ")
+
+
 def get_name():
     name = input('Contestant #1\'s name? ').strip()
     return name
@@ -129,6 +174,10 @@ def battle_announce(player, other_player):
 
 
 def main():
+    loading_screen()
+    print(
+        '\n--------------------------------------------------------------------------\n'
+    )
     print('''\n\t(\ 
 \t\\'\ 
 \t \\'\      __________  
