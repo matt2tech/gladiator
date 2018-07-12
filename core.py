@@ -34,7 +34,7 @@ def attack(attacker, defender, player, other_player):
     else:
         print('{} missed'.format(player))
         print('( ÒДÓ)⊃o-|===> ε=ε=ε=┌( ^-^)ﾉ')
-        attacker['rage'] = 0
+        attacker['rage'] -= 10
 
 
 def heal(gladiator, name):
@@ -92,6 +92,6 @@ def evading(gladiator, name):
 
     else:
         print(
-            '{} attempted to evade but tripped over a pebble\n"Rage required'.
+            '{} attempted to evade but tripped over a pebble\n"40 Rage required'.
             format(name))
         print('.︵ /(.□ . \）')
