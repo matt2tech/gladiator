@@ -90,7 +90,7 @@ def credits(player1, player2):
             print('\t          `')
             sleep(0.1)
             print('Thanks for playing Battle of the Ages')
-            sleep(0.5)
+            sleep(2)
             exit()
 
         else:
