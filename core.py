@@ -58,7 +58,7 @@ def heal(gladiator, name):
 def rampage(attacker, defender, player, other_player):
     if attacker['rage'] == 100:
         accuracy = randint(1, 100)
-        if accuracy > min(defender['evasion'] + 25, 80):
+        if accuracy > defender['evasion'] + 25:
             defender['health'] = max(defender['health'] - 50, 0)
             attacker['rage'] = 0
             print(
@@ -84,10 +84,9 @@ def is_dead(gladiator):
 
 
 def evading(gladiator, name):
-    if gladiator['rage'] > 0:
-        gladiator['evasion'] = min(
-            gladiator['evasion'] + gladiator['rage'] / 1.5, 100)
-        gladiator['rage'] = 0
+    if gladiator['rage'] >= 40:
+        gladiator['evasion'] += 45
+        gladiator['rage'] = gladiator['rage'] - 40
         print('{} is evading'.format(name))
         print('ε=ε=ε=┌( o-o)ﾉ')
 
