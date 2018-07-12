@@ -19,6 +19,7 @@ def attack(attacker, defender, player, other_player):
         if attacker['rage'] >= randint(1, 100):
             print('{} rages, slings the controller and hits {} in the head'.
                   format(player, other_player))
+            print('"{} dealt {} DMG"'.format(player, attack * 2))
             print('( -_-)つ -=≡~B(҂T-T)')
             defender['health'] = max(defender['health'] - attack * 2, 0)
             attacker['rage'] = 0
@@ -28,11 +29,12 @@ def attack(attacker, defender, player, other_player):
             defender['health'] = max(defender['health'] - attack, 0)
             attacker['rage'] = min(attacker['rage'] + 10, 100)
             print('{} hit {}'.format(player, other_player))
+            print('"{} dealt {} DMG"'.format(player, attack))
             print('( ಠ_ಠ)⊃o-|===>(ಠ╭╮ಠ )')
             #testing function
             #return defender['health']
     else:
-        print('{} missed'.format(player))
+        print('{} evaded'.format(other_player))
         print('( ÒДÓ)⊃o-|===> ε=ε=ε=┌( ^-^)ﾉ')
         attacker['rage'] = max(attacker['rage'] - 10, 0)
 
@@ -64,7 +66,8 @@ def rampage(attacker, defender, player, other_player):
             print(
                 '{} unleashed built-up rage, went on a rampaged and severely injured {}'.
                 format(player, other_player))
-            print("（╯°□ °）╯︵( .o.)")
+            print('"{} dealt 50 DMG"'.format(player))
+            print("（╯°□ °）╯︵（ .o.）")
 
         else:
             attacker['rage'] = 0
@@ -94,4 +97,4 @@ def evading(gladiator, name):
         print(
             '{} attempted to evade but tripped over a pebble\n"40 Rage required'.
             format(name))
-        print('.︵ /(.□ . \）')
+        print('.︵ /(.□ . \)')
