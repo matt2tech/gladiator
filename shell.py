@@ -2,103 +2,145 @@ from core import *
 from time import sleep
 
 
-def credits(player1, player2):
-    text = ''
-    while text != '3':
-        text = input('1 - Roll credits\n2 - Replay\n3 - Quit\n>>> ')
+def start_menu():
+    while True:
+        sleep(0.1)
+        print(
+            '\n--------------------------------------------------------------------------'
+        )
+        sleep(0.1)
+        print('\n')
+        sleep(0.1)
+        print('\n')
+        sleep(0.1)
+        print(' ___       _   _   _            __   _   _            _')
+        sleep(0.1)
+        print(
+            '| _ ) __ _| |_| |_| |___   ___ / _| | |_| |_  ___    /_\  __ _ ___ ___'
+        )
+        sleep(0.1)
+        print(
+            '| _ \/ _` |  _|  _| / -_) / _ \  _| |  _| \' \/ -_)  / _ \/ _` / -_|_-<'
+        )
+        sleep(0.1)
+        print(
+            '|___/\__,_|\__|\__|_\___| \___/_|    \__|_||_\___| /_/ \_\__, \___/__/'
+        )
+        sleep(0.1)
+        print('                                                         |___/')
+        sleep(0.1)
+        print('\n')
+        sleep(0.1)
+        print('\n')
+        sleep(0.1)
+        print(
+            '--------------------------------------------------------------------------\n'
+        )
+        sleep(0.1)
+        text = input('{:<37}{:>37}\n>>> '.format('1 - Start Game',
+                                                 '2 - Quit Game'))
         if text == '1':
-            sleep(0.5)
+            break
+
+        elif text == '2':
+            sleep(0.1)
+            print('Quitting game...')
+            sleep(2)
             print(
                 '\n--------------------------------------------------------------------------\n'
             )
-            print('Developer:')
-            sleep(0.5)
-            print('Matthew Lipsey\n')
-            sleep(0.5)
-            print('World Artwork:')
-            sleep(0.5)
-            print('ASCII Art Archive\n')
-            sleep(0.5)
-            print('Character Artwork:')
-            sleep(0.5)
-            print('Unicode\n')
-            sleep(0.5)
-            print('Testers:')
-            sleep(0.5)
-            print('Henry Moore')
-            sleep(0.5)
-            print('Cody van der Poel\n')
-            sleep(0.5)
-            print('Code:')
-            sleep(0.5)
-            print('Python\n')
-            sleep(0.5)
-            print('Text Editor:')
-            sleep(0.5)
-            print('Visual Studio Code\n')
-            sleep(0.5)
-            print('Special Thanks:')
-            sleep(0.5)
-            print('Base Camp Coding Academy')
-            sleep(0.5)
-            print('Player 1: {}'.format(player1))
-            sleep(0.5)
-            print('Player 2: {}'.format(player2))
-            sleep(0.5)
-            print('Terminals and command prompts everywhere\n')
-            sleep(0.5)
-            print(
-                '--------------------------------------------------------------------------'
-            )
-
-        elif text == '2':
-            sleep(2)
-            main()
-
-        elif text == '3':
-            sleep(0.1)
-            print('\t     ___________')
-            sleep(0.1)
-            print('\t._____l_______l_____.')
-            sleep(0.1)
-            print('\t||_____/  |  \_____||')
-            sleep(0.1)
-            print('\t      /   |   \\')
-            sleep(0.1)
-            print('\t     /    |    \\')
-            sleep(0.1)
-            print('\t    /     |     \\')
-            sleep(0.1)
-            print('\t   /      |      \\')
-            sleep(0.1)
-            print('\t  /       |       \\')
-            sleep(0.1)
-            print('\t /        |        \\')
-            sleep(0.1)
-            print('\t|         |         |')
-            sleep(0.1)
-            print('\t \        |        /')
-            sleep(0.1)
-            print('\t   \      |      /')
-            sleep(0.1)
-            print('\t     \    |    /')
-            sleep(0.1)
-            print('\t       \  |  /')
-            sleep(0.1)
-            print('\t         \|/')
-            sleep(0.1)
-            print('\t          `')
-            sleep(0.1)
-            print('Thanks for playing Battle of the Ages')
-            sleep(2)
             exit()
 
         else:
-            print('Invalid input')
+            sleep(0.1)
+            print('Invalid choice')
+            sleep(2)
             print(
-                '\n--------------------------------------------------------------------------\n'
+                '\n--------------------------------------------------------------------------'
             )
-            sleep(0.5)
+
+
+def credits(player1, player2):
+    print(
+        '\n--------------------------------------------------------------------------\n'
+    )
+    print('Developer:')
+    sleep(0.5)
+    print('Matthew Lipsey\n')
+    sleep(0.5)
+    print('World Artwork:')
+    sleep(0.5)
+    print('ASCII Art Archive\n')
+    sleep(0.5)
+    print('Character Artwork:')
+    sleep(0.5)
+    print('Unicode\n')
+    sleep(0.5)
+    print('Testers:')
+    sleep(0.5)
+    print('Henry Moore')
+    sleep(0.5)
+    print('Cody van der Poel\n')
+    sleep(0.5)
+    print('Code:')
+    sleep(0.5)
+    print('Python\n')
+    sleep(0.5)
+    print('Text Editor:')
+    sleep(0.5)
+    print('Visual Studio Code\n')
+    sleep(0.5)
+    print('Special Thanks:')
+    sleep(0.5)
+    print('Base Camp Coding Academy')
+    sleep(0.5)
+    print('Player 1: {}'.format(player1))
+    sleep(0.5)
+    print('Player 2: {}'.format(player2))
+    sleep(0.5)
+    print('Terminals and command prompts everywhere')
+    sleep(2)
+    print(
+        '\n--------------------------------------------------------------------------\n'
+    )
+    sleep(0.1)
+    print('\t     ___________')
+    sleep(0.1)
+    print('\t._____l_______l_____.')
+    sleep(0.1)
+    print('\t||_____/  |  \_____||')
+    sleep(0.1)
+    print('\t      /   |   \\')
+    sleep(0.1)
+    print('\t     /    |    \\')
+    sleep(0.1)
+    print('\t    /     |     \\')
+    sleep(0.1)
+    print('\t   /      |      \\')
+    sleep(0.1)
+    print('\t  /       |       \\')
+    sleep(0.1)
+    print('\t /        |        \\')
+    sleep(0.1)
+    print('\t|         |         |')
+    sleep(0.1)
+    print('\t \        |        /')
+    sleep(0.1)
+    print('\t   \      |      /')
+    sleep(0.1)
+    print('\t     \    |    /')
+    sleep(0.1)
+    print('\t       \  |  /')
+    sleep(0.1)
+    print('\t         \|/')
+    sleep(0.1)
+    print('\t          `')
+    sleep(0.1)
+    print('Thanks for playing Battle of the Ages')
+    sleep(2)
+    print(
+        '--------------------------------------------------------------------------'
+    )
 
 
 def loading_screen():
@@ -393,6 +435,8 @@ def trophy():
 
 
 def main():
+    start_menu()
+
     loading_screen()
 
     sign_up()
