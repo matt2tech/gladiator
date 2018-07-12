@@ -2,6 +2,88 @@ from core import *
 from time import sleep
 
 
+def credits(player1, player2):
+    text = input('1 - Roll credits\n2 - Replay\n')
+    if text == '1':
+        sleep(1)
+        print(
+            '\n--------------------------------------------------------------------------\n'
+        )
+        print('Developer:')
+        sleep(1)
+        print('Matthew Lipsey\n')
+        sleep(1)
+        print('World Artwork:')
+        sleep(1)
+        print('ASCII Art Archive\n')
+        sleep(1)
+        print('Character Artwork:')
+        sleep(1)
+        print('Unicode\n')
+        sleep(1)
+        print('Testers:')
+        sleep(1)
+        print('Henry Moore')
+        sleep(1)
+        print('Cody van der Poel\n')
+        sleep(1)
+        print('Code:')
+        sleep(1)
+        print('Python\n')
+        sleep(1)
+        print('Text Editor:')
+        sleep(1)
+        print('Visual Studio Code\n')
+        sleep(1)
+        print('Special Thanks:')
+        sleep(1)
+        print('Base Camp Coding Academy')
+        sleep(1)
+        print('Player 1: {}'.format(player1))
+        sleep(1)
+        print('Player 2: {}'.format(player2))
+        sleep(1)
+        print('Computer terminals and command prompts everywhere\n')
+        print(
+            '\n--------------------------------------------------------------------------\n'
+        )
+        sleep(2)
+        print('\t     ___________')
+        sleep(1)
+        print('\t._____l_______l_____.')
+        sleep(1)
+        print('\t||_____/  |  \_____||')
+        sleep(1)
+        print('\t      /   |   \\')
+        sleep(1)
+        print('\t     /    |    \\')
+        sleep(1)
+        print('\t    /     |     \\')
+        sleep(1)
+        print('\t   /      |      \\')
+        sleep(1)
+        print('\t  /       |       \\')
+        sleep(1)
+        print('\t /        |        \\')
+        sleep(1)
+        print('\t|         |         |')
+        sleep(1)
+        print('\t \        |        /')
+        sleep(1)
+        print('\t   \      |      /')
+        sleep(1)
+        print('\t     \    |    /')
+        sleep(1)
+        print('\t       \  |  /')
+        sleep(1)
+        print('\t         \|/')
+        sleep(1)
+        print('\t          `')
+        sleep(1)
+        print('Thanks for playing Battle of the Ages')
+        sleep(1)
+
+
 def loading_screen():
     print(
         '\n--------------------------------------------------------------------------\n'
@@ -220,6 +302,10 @@ ____________________________________|  """|"______________________________
                              (_           ::::::_)
                                `"""---------"""'
 ''')
+    print(
+        '\n--------------------------------------------------------------------------\n'
+    )
+    credits(first_player, second_player)
 
 
 if __name__ == '__main__':
