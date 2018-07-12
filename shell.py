@@ -138,9 +138,7 @@ def credits(player1, player2):
     sleep(0.1)
     print('Thanks for playing Battle of the Ages')
     sleep(2)
-    print(
-        '--------------------------------------------------------------------------'
-    )
+    main()
 
 
 def loading_screen():
